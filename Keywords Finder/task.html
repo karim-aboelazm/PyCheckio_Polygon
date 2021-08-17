@@ -1,0 +1,118 @@
+<h2>Keywords Finder</h2>
+<p>
+ Sophie has found a stash books and she wants to find information about the ancients who lived on the islands.
+    Unfortunately, she does not have a text search module and needs some help.
+    Let's write a program to help her search for keywords on the pages of a book.
+</p>
+<p>
+ You are given some plain text (without tags) and a string with keywords (or parts of words, or letters) separated by spaces.
+    You will need to find all the keywords and put these words into "
+ <strong>
+  &lt;span&gt;&lt;/span&gt;
+ </strong>
+ " wrappers to highlight them for Sophie.
+    You can ignore upper or lower cases for the key words, but the original letter cases in the text should remain.
+</p>
+<p>
+ For the cases when keywords contain or intersect each other you should highlight the larger word without nested span tags.
+    Let's look it with example.
+ <br/>
+ The text
+ <em>
+  "Hello World! Or LOL"
+ </em>
+ and keywords
+ <em>
+  "hell world or lo"
+ </em>
+ .
+ <br/>
+ The word
+ <em>
+  "World"
+ </em>
+ contains two keywords thus we tag only larger part
+ <em>
+  "&lt;span&gt;World&lt;/span&gt;"
+ </em>
+ .
+ <br/>
+ <em>
+  "Hello"
+ </em>
+ contains two intersected words
+ <em>
+  "hell"
+ </em>
+ and
+ <em>
+  "lo"
+ </em>
+ and we tag the larger part again
+ <em>
+  "&lt;span&gt;Hello&lt;/span&gt;"
+ </em>
+ .
+ <br/>
+ Be careful, a result like
+ <em>
+  "&lt;span&gt;Hel&lt;span&gt;lo&lt;/span&gt;&lt;/span&gt;"
+ </em>
+ is considered wrong because it contains nested tags.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments. A text and key words as strings.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The text with wrapped key words.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">assert (
+    checkio(&quot;This is only a text example for task example.&quot;, &quot;example&quot;)
+    == &quot;This is only a text &lt;span&gt;example&lt;/span&gt; for task &lt;span&gt;example&lt;/span&gt;.&quot;
+)
+assert (
+    checkio(&quot;Python is a widely used high-level programming language.&quot;, &quot;pyThoN&quot;)
+    == &quot;&lt;span&gt;Python&lt;/span&gt; is a widely used high-level programming language.&quot;
+)
+assert (
+    checkio(&quot;It is experiment for control groups with similar distributions.&quot;, &quot;is im&quot;)
+    == &quot;It &lt;span&gt;is&lt;/span&gt; exper&lt;span&gt;im&lt;/span&gt;ent for control groups with s&lt;span&gt;im&lt;/span&gt;ilar d&lt;span&gt;is&lt;/span&gt;tributions.&quot;
+)
+assert (
+    checkio(&quot;The National Aeronautics and Space Administration (NASA).&quot;, &quot;nasa  THE&quot;)
+    == &quot;&lt;span&gt;The&lt;/span&gt; National Aeronautics and Space Administration (&lt;span&gt;NASA&lt;/span&gt;).&quot;
+)
+</pre>
+ <p class="for_info_only">
+  <strong>
+   How it is used:
+  </strong>
+  You see this task every day when use your browser or work with documents.
+    Every time when you search something on the page and want to see the found fragments as highlighted parts,
+    you encounter the concept seen in this task.
+    This problem can be more complex if you use it for the languages where you need to write "lowercase" rules.
+ </p>
+ <p>
+  <strong>
+   Precondition:
+  </strong>
+  <br/>
+  0 &lt; len(text) &lt; 5000
+  <br/>
+  0 &lt; len(the_number_of_key_words) &lt; 30
+ </p>
+</div>
+
+<p><a href="https://py.checkio.org/en/mission/words-finder">See the task on CheckiO</a></p>

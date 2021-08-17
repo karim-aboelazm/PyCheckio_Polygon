@@ -1,0 +1,91 @@
+<h2>Cipher dict</h2>
+<!-- Describe task in general -->
+<p>
+ In this mission, you have to convert a plain text to a cipher dictionary according to the next rules.
+ <br/>
+ <ol>
+  <li>
+   Encode the plain text with utf-8.
+  </li>
+  <li>
+   Take this value as a single hexadecimal number and convert it to a decimal number.
+  </li>
+  <li>
+   Make a empty dictionary A.
+  </li>
+  <li>
+   Add a data(key = value of each digit of decimal number, value = empty dictionary) to the appropriate dictionary.
+  </li>
+  <ol>
+   <li>
+    Initial dictionary is A
+   </li>
+   <li>
+    Change to a dictionary that was created earlier at the timing when the ascending order and descending order of the value of each digit of the decimal number are switched. (Change even if the same value continues.)
+    <b>
+     Store from the upper digit. And find the ascending part first.
+    </b>
+   </li>
+   ex.)  
+decimal number == 1248854369653  → 1248 / 8543 / 69 / 653
+   <br/>
+   <ul>
+    <li>
+     Change at the timing /.
+    </li>
+   </ul>
+  </ol>
+ </ol>
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ A plain text as a string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A cipher data as a dict.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">get_cipher("hello") == {4: {4: {8: {3: {7: {0: {4: {}, 7: {}}, 2: {2: {}}}, 8: {3: {}}}}}}}
+get_cipher("This is a plain text.") == {1: {3: {2: {1: {4: {7: {4: {1: {0: {}, 2: {}, 7: {}}, 4: {9: {}}, 8: {3: {}}},
+                                      6: {8: {1: {}, 4: {}, 9: {}}}}}, 9: {5: {5: {6: {1: {}, 4: {}}, 8: {}}}}}}}},
+                                      2: {6: {2: {8: {4: {9: {5: {2: {}, 8: {}}}}}}}}, 3: {2: {4: {1: {4: {8: {3: {0: {},
+                                      2: {}}}}}, 3: {5: {3: {5: {4: {}, 7: {}}}}}}}}}
+</pre>
+ 
+</div>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+ <strong>
+  How it’s used:
+ </strong>
+ <i>
+  (It may not be valuable as a cipher, but it will be useful for studying character code conversion and dictionary structure.)
+ </i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  The text contain only ASCII symbols.
+ </i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/cipher-dict-2">See the task on CheckiO</a></p>

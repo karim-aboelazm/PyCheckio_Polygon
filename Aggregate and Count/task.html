@@ -1,0 +1,39 @@
+<h2>Aggregate and Count</h2>
+<!-- Describe task in general -->
+<p>
+ You have a list of values where each element is a list of two values. First is a name and the second one is counter.
+</p>
+<p>
+ What you need to do is to aggregate those values into a dict, which is easy, you can simply use function disc for that. But, name is not unique, so if you find more that one elements with the same name, you should sum their counters in the aggregated dict.
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ List of list of two elelemnts - str and int.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Int.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">assert aggregate_and_count([[&quot;a&quot;, 1], [&quot;b&quot;, 2]]) == {&quot;a&quot;: 1, &quot;b&quot;: 2}
+assert aggregate_and_count([[&quot;a&quot;, 1], [&quot;a&quot;, 2]]) == {&quot;a&quot;: 3}
+assert aggregate_and_count([[&quot;a&quot;, 1], [&quot;b&quot;, 2], [&quot;c&quot;, 3], [&quot;a&quot;, 5]]) == {
+    &quot;a&quot;: 6,
+    &quot;b&quot;: 2,
+    &quot;c&quot;: 3,
+}
+assert aggregate_and_count([[&quot;a&quot;, 1]]) == {&quot;a&quot;: 1}</pre>
+</div>
+
+<p><a href="https://py.checkio.org/en/mission/aggregate-and-count">See the task on CheckiO</a></p>

@@ -1,0 +1,26 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def aggregate_and_count(items: list) -> dict:\r\n    # your code here\r\n\
+    \    return {}\r\n\r\n\r\nprint(\"Example:\")\r\nprint(aggregate_and_count([[\"\
+    a\", 1], [\"b\", 2], [\"c\", 3], [\"a\", 5]]))\r\n\r\nassert aggregate_and_count([[\"\
+    a\", 1], [\"b\", 2]]) == {\"a\": 1, \"b\": 2}\r\nassert aggregate_and_count([[\"\
+    a\", 1], [\"a\", 2]]) == {\"a\": 3}\r\nassert aggregate_and_count([[\"a\", 1],\
+    \ [\"b\", 2], [\"c\", 3], [\"a\", 5]]) == {\r\n    \"a\": 6,\r\n    \"b\": 2,\r\
+    \n    \"c\": 3,\r\n}\r\nassert aggregate_and_count([[\"a\", 1]]) == {\"a\": 1}\r\
+    \n\r\nprint(\"The aggregation is done! Click 'Check' to earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+feedback:
+  message: Checking took too much time
+  time: Mon, 16 Aug 2021 19:48:21 UTC
+code: "def aggregate_and_count(items: list) -> dict:\r\n    # your code here\r\n \
+  \   return {}\r\n\r\n\r\nprint(\"Example:\")\r\nprint(aggregate_and_count([[\"a\"\
+  , 1], [\"b\", 2], [\"c\", 3], [\"a\", 5]]))\r\n\r\nassert aggregate_and_count([[\"\
+  a\", 1], [\"b\", 2]]) == {\"a\": 1, \"b\": 2}\r\nassert aggregate_and_count([[\"\
+  a\", 1], [\"a\", 2]]) == {\"a\": 3}\r\nassert aggregate_and_count([[\"a\", 1], [\"\
+  b\", 2], [\"c\", 3], [\"a\", 5]]) == {\r\n    \"a\": 6,\r\n    \"b\": 2,\r\n   \
+  \ \"c\": 3,\r\n}\r\nassert aggregate_and_count([[\"a\", 1]]) == {\"a\": 1}\r\n\r\
+  \nprint(\"The aggregation is done! Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807
